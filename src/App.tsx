@@ -1,20 +1,19 @@
 import "./App.css";
-
 import styled from "styled-components";
 import { Home } from "./modules/home";
+import { Header } from "./shared/components";
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  color: black;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
 `;
 
 function App() {
   return (
     <Container>
+      <Header />
       <Home />
     </Container>
   );
