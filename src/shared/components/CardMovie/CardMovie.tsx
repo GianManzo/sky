@@ -1,12 +1,10 @@
 import { Card, CardContent, Typography } from "@mui/material";
 
-export const CardMovie = () => {
+export const CardMovie = ({ url }: { url: string }) => {
   return (
     <Card>
       <CardContent>
-        <Typography variant="h5" component="div">
-          Welcome to Sky
-        </Typography>
+        <img src={url} alt="Movie" />
       </CardContent>
     </Card>
   );

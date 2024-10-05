@@ -1,12 +1,11 @@
 import { CardMovie } from "../../shared/components";
+import { BannerCarousel } from "../../shared/components/BannerCarousel/BannerCarousel";
 import { Banner, MovieCard, MoviesSection } from "./home.styles";
 
 export const Home = () => {
   return (
     <div>
-      <Banner>
-        <img src="banner-url-aqui" alt="Banner principal" />
-      </Banner>
+      <BannerCarousel />
 
       <MoviesSection>
         <h2>Os mais vistos</h2>

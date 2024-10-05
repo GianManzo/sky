@@ -23,11 +23,24 @@ a:hover {
 }
 
 body {
+  overflow: hidden;
+  padding: 0;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+}
+
+.slick-slide {
+  transform: scale(0.9);
+  transition: all 0.4 ease-in-out;
+  padding: 40px 0;
+}
+
+.slick-slide img {
+  max-width: 100%;
+  transition: all 0.4 ease-in-out;
+}
+
+.slick-center {
+  transform: scale(1);
 }
 
 h1 {
