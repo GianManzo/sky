@@ -1,5 +1,5 @@
 import { CardMovie } from "../../shared/components";
-import { BannerCarousel } from "../../shared/components/BannerCarousel/BannerCarousel";
+import { BannerCarousel } from "./components/BannerCarousel/BannerCarousel";
 import { Banner, MovieCard, MoviesSection } from "./home.styles";
 
 export const Home = () => {
