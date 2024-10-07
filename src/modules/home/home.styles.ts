@@ -23,7 +23,7 @@ export const MoviesSection = styled.section`
 
 export const MovieCard = styled.div`
   img {
-    width: 100%;
+    width: initial;
     height: auto;
     border-radius: 5px;
   }

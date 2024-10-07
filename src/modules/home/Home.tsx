@@ -1,20 +1,25 @@
+import { useState } from "react";
 import { CardMovie } from "../../shared/components";
 import { BannerCarousel } from "./components/BannerCarousel/BannerCarousel";
 import { Banner, MovieCard, MoviesSection } from "./home.styles";
 
 export const Home = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   return (
     <div>
-      <BannerCarousel />
+      <BannerCarousel setIsLoading={setIsLoading} />
 
-      <MoviesSection>
-        <h2>Os mais vistos</h2>
-        <div className="movies-grid">
-          {["url1", "url2", "url3"].map((movie, index) => (
-            <CardMovie key={index} />
-          ))}
-        </div>
-      </MoviesSection>
+      {!isLoading && (
+        <MoviesSection>
+          <h2>Os mais vistos</h2>
+          <div className="movies-grid">
+            {["url1", "url2", "url3"].map((movie, index) => (
+              <CardMovie key={index} />
+            ))}
+          </div>
+        </MoviesSection>
+      )}
     </div>
   );
 };

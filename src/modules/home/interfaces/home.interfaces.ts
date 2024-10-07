@@ -6,5 +6,7 @@ export interface IMovie {
 }
 
 export interface IMovies {
-  results: IMovie[];
+  data: {
+    results: IMovie[];
+  };
 }
