@@ -8,16 +8,18 @@ const moviesHost = "moviesdatabase.p.rapidapi.com";
 interface IParams {
   perPage: string;
   page: string;
-  list: string;
+  filter?: string;
+  genre?: "Drama" | "Comedy" | "Horror" | "Action";
 }
 
-export const getMovieBannerAPI = ({
+export const getMoviesAPI = ({
   perPage,
   page,
-  list,
+  filter,
+  genre,
 }: IParams): Promise<IMovies> => {
   return axios.get(moviesAPI, {
-    params: { limit: perPage, list, page },
+    params: { limit: perPage, list: filter, page, genre },
     headers: {
       "x-rapidapi-key": moviesKEY,
       "x-rapidapi-host": moviesHost,

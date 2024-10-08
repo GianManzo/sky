@@ -3,10 +3,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useCallback, useEffect, useState } from "react";
 
-import { getMovieBannerAPI } from "../../apis/banner.api";
+import { getMoviesAPI } from "../../apis/movies.api";
 import { IMovie } from "../../interfaces/home.interfaces";
 
-import { settingsBanner } from "../../utils/settingsBanner";
+import { settingsBanner } from "../../utils/settingsCarrousel";
 
 export interface IBannerCarouselProps {
   setIsLoading: (isLoading: boolean) => void;
@@ -18,8 +18,8 @@ export const BannerCarousel = ({ setIsLoading }: IBannerCarouselProps) => {
   const getMovies = useCallback(async () => {
     setIsLoading(true);
     try {
-      const response = await getMovieBannerAPI({
-        list: "top_rated_series_250",
+      const response = await getMoviesAPI({
+        filter: "top_rated_series_250",
         page: "3",
         perPage: "5",
       });

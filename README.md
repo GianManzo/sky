@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# 🚀 Minha Aplicação em React + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao repositório da minha aplicação! 🎉 Este projeto foi construído utilizando as mais modernas tecnologias como **React**, **TypeScript**, **Styled Components**, **Axios**, e **React-Slick**. Com uma estrutura de componentes organizada, o objetivo é oferecer uma experiência de desenvolvimento fluida e modular.
 
-Currently, two official plugins are available:
+## 📦 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Biblioteca para construir interfaces de usuário de forma eficiente.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática e segurança ao código.
+- **Styled Components**: Para estilização de componentes com CSS-in-JS.
+- **React-Slick**: Para a criação de um carrossel dinâmico e responsivo.
+- **Axios**: Biblioteca para realizar requisições HTTP de forma simples e rápida.
+- **Vite**: Ferramenta de build rápida para desenvolvimento de front-end, ideal para projetos com React.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📁 Estrutura do Projeto
 
-- Configure the top-level `parserOptions` property like this:
+```bash
+src/
+│
+├── components/        # Componentes reutilizáveis
+│   └── Header.tsx     # Componente Header
+│   └── Footer.tsx     # Componente Footer
+│
+├── modules/           # Módulos principais da aplicação
+│   └── Home.tsx       # Componente Home
+│
+├── services/          # Configuração do Axios para requisições HTTP
+│   └── api.ts         # Instância do Axios
+│
+├── styles/            # Estilos globais e temas
+│   └── index.css # Estilos globais com styled-components
+│
+└── App.tsx            # Componente principal da aplicação
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+🌟 Funcionalidades
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+🖼 Carrossel de Imagens: Um carrossel de filmes dinâmico, responsivo, implementado com React-Slick.
+🖥 Componentização: Cada parte da interface é desenvolvida com componentes reutilizáveis.
+🔥 Axios: Consumo de APIs externas de forma eficiente para exibir dados dinâmicos.
+🎨 Estilização Dinâmica: Utilização de Styled Components para facilitar a personalização e manutenção de estilos.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```

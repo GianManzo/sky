@@ -9,16 +9,7 @@ export const Banner = styled.div`
 `;
 
 export const MoviesSection = styled.section`
-  padding: 20px;
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  .movies-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-  }
+  width: 100%;
 `;
 
 export const MovieCard = styled.div`

@@ -2,6 +2,7 @@ import "./App.css";
 import styled from "styled-components";
 import { Home } from "./modules/home";
 import { Header } from "./shared/components";
+import { Footer } from "./shared/components/Footer/Footer";
 
 const Container = styled.div`
   width: 100%;
@@ -15,6 +16,7 @@ function App() {
     <Container>
       <Header />
       <Home />
+      <Footer />
     </Container>
   );
 }
