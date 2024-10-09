@@ -1,4 +1,4 @@
-import "./App.css";
+import "./index.css";
 import styled from "styled-components";
 import { Home } from "./modules/home";
 import { Header } from "./shared/components";
